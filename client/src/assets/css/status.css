@@ -1,0 +1,36 @@
+:root{
+    --darkgray: #454545;
+    --white: #FFFFFF;
+    --pink: #c002ff;
+    --darkPink: #ac02ff;
+  }
+
+.status{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: .75rem;
+    
+}
+
+.status-desc{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bx-loader-circle{
+    animation: spin 1s infinite;
+}
+
