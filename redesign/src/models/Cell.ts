@@ -15,10 +15,10 @@ interface DrawParams{
 
 class Cell{
     private ctx : CanvasRenderingContext2D | null;
-    private size : number;
-    private position: Vec2;
-    private borderColor: string | undefined;
-    private fillColor: string | undefined;
+    public size : number;
+    public position: Vec2;
+    public borderColor: string | undefined;
+    public fillColor: string | undefined;
     constructor(params : CellParams){
         
         this.ctx = params.ctx;
@@ -27,6 +27,22 @@ class Cell{
         this.borderColor = params.borderColor;
         this.fillColor = params.fillColor
         
+    }
+
+    public setBorderColor = (color: string): void => {
+        this.borderColor = color;
+    }
+
+    public setFillColor = (color: string) : void => {
+        this.fillColor = color;
+    }
+
+    public setSize = (size : number) : void => {
+        this.size = size;
+    }
+
+    public setPosition = (pos: Vec2) : void => {
+        this.position = pos;
     }
 
     public draw = () : void => {
